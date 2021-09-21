@@ -4,21 +4,19 @@ import io
 from PIL import Image
 #import cv2
 
+
 serverSocket = socket(AF_INET, SOCK_STREAM)
-
 serverPort = 6789
-
 serverSocket.bind(("", serverPort))
-
 serverSocket.listen(1)
 
 while True:
+    
     print('The server is ready to receive')
-
     connectionSocket, addr = serverSocket.accept()
+    
     try:
         message = connectionSocket.recv(1024).decode()
-
         filename = message.split()[1]
         filename = filename[1:]
         extension = filename.split('.')[1]

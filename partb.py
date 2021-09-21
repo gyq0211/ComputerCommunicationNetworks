@@ -7,8 +7,10 @@ serverSocket.bind(("", serverPort))
 serverSocket.listen(1)
 
 while True:
+    
     print('The server is ready to receive')
     connectionSocket, addr = serverSocket.accept()
+    
     try:
         message = connectionSocket.recv(1024).decode()
         filename = message.split()[1]

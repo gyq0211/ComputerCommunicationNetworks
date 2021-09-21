@@ -1,7 +1,9 @@
 # Program 1 Simple Editor
 # version python 3.8
 # read, write, delete, rename
+
 import os
+
 print("This is a command line text editor. You can read, write, delete and rename a file.")
 file_name = input("Please enter the file that you want to edit: (make sure that your name contains the .txt)")
 
@@ -39,7 +41,9 @@ def rename():
 
 
 keepAlive = True
+
 while keepAlive:
+    
     user_input1 = input("Please enter your command: ")
     if user_input1 == "read":
         read()
